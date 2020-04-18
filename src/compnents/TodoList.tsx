@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
-import { Text, Button } from 'react-native';
+import { Text } from 'react-native';
+import { Button } from 'react-native-elements';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
@@ -13,9 +14,20 @@ const Wrapper = styled.View`
 `;
 
 const SingleElementList = styled.View`
-    border: 1px solid black;
+    border-radius: 25px;
+    background: #FEFE33;
     margin: 0 0 20px 0;
+    padding: 5px 10px;
 `;
+const NameText = styled.Text`
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+`;
+const DescText = styled.Text`
+    font-size: 15px;
+`;
+
 
 const TodoList: FC<{switchView(formView: boolean)}> = props => {
     const todoListState = useSelector<IState, ITodoListReducer>(state => state.todoList)
@@ -26,12 +38,19 @@ const TodoList: FC<{switchView(formView: boolean)}> = props => {
         <Wrapper>
             {todoListState.todoList.map((elem: ISingleElementList, index: number) =>
                 <SingleElementList key={index}>
-                    <Text>{elem.name}</Text>
-                    <Text>{elem.description}</Text>
-
+                    <NameText>{elem.name}</NameText>
+                    <DescText>{elem.description}</DescText>
                 </SingleElementList>
             )}
-            <Button title="Dodaj nowy" onPress={goToForm}/>
+            <Button
+                icon={{
+                    name: "add",
+                    size: 15,
+                    color: "white"
+                }}
+                title="Dodaj"
+                onPress={goToForm}
+                />
         </Wrapper>
     )
 };

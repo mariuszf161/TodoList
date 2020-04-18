@@ -7,11 +7,11 @@ export interface ITodoListReducer {
 
 const defaultState = (): ITodoListReducer => ({
     todoList: [{
-        name: 'Pierwszy',
-        description: 'Pierwsze zadanie'
+        name: 'Zrobić zakupy',
+        description: 'Mleko, chleb, kawa, 2 pomidory'
     },{
-        name: 'drugi',
-        description: 'drugie zadanie'
+        name: 'Trening',
+        description: 'od 17 do 20 - zabrać rzeczy!'
     }]
 });
 

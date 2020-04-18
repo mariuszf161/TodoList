@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Button, View } from 'react-native';
+import { Button, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 
 
@@ -12,13 +12,14 @@ const TodoListScreen = ({navigation}) => {
     const [FormViwe, setFromView] = useState<boolean>(false);
 
     return (
-        <View>
+        <ScrollView>
             {FormViwe ? (
                 <Form switchView={setFromView}/>
             ) : (
                 <TodoList switchView={setFromView}/>
             )}
-        </View>
+        </ScrollView>
+        
     );
 };
 
