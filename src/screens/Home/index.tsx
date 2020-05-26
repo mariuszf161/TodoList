@@ -16,6 +16,7 @@ const TitleText = styled.Text`
     font-size: 30px;
     color: ${Colors.black};
     text-align: center;
+    margin-bottom: 10px;
 `;
 
 const HomeImage = styled.Image`
