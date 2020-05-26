@@ -3,11 +3,13 @@ import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
 
 import Colors from '../../constans/Colors';
+import Layout from '../../constans/Layout'
+
 
 const HomeView = styled.View`
-    width: 100%;
-    height: 100%;
+    wmin-height: 100%;
     background: ${Colors.lightBlue};
+    padding-top: ${Layout.statusBar + 10}px;
 `;
 
 const TitleText = styled.Text`
@@ -24,6 +26,7 @@ const HomeImage = styled.Image`
 const DescText = styled.Text`
     font-size: 20px;
     margin: auto 20px;
+    margin-bottom: 50px;
 `;
  interface IHomeProps {
      myProps: string;

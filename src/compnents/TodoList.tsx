@@ -9,9 +9,11 @@ import { IState } from '../reducers';
 import { ITodoListReducer } from '../reducers/todoListReducer';
 
 import { ISingleElementList } from '../enitities/todoSingleEL';
+import Layout from '../constans/Layout'
 
 const Wrapper = styled.View`
-    margin: 80px 20px 0px 20px;
+    padding-top: ${Layout.statusBar + 10}px;
+    margin: 0 20px 0 20px;
 `;
 
 const SingleElementList = styled.View`
