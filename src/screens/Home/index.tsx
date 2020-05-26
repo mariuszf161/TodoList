@@ -7,7 +7,7 @@ import Layout from '../../constans/Layout'
 
 
 const HomeView = styled.View`
-    wmin-height: 100%;
+    min-height: 100%;
     background: ${Colors.lightBlue};
     padding-top: ${Layout.statusBar + 10}px;
 `;
@@ -21,7 +21,7 @@ const TitleText = styled.Text`
 const HomeImage = styled.Image`
     width: 150px;
     height: 150px;
-    margin: 50px auto 20px auto; 
+    margin: 20px auto 20px auto; 
 `;
 const DescText = styled.Text`
     font-size: 20px;
