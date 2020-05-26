@@ -7,32 +7,34 @@ import Colors from '../../constans/Colors';
 const HomeView = styled.View`
     width: 100%;
     height: 100%;
+    background: ${Colors.lightBlue};
 `;
 
-const WelcomeText = styled.Text`
-    margin: 40px auto 0px auto; 
-    font-size: 20px;
-    text-align: center;
+const TitleText = styled.Text`
+    font-size: 30px;
     color: ${Colors.black};
-    width: 300px;
-    height: 100px;
+    text-align: center;
 `;
 
 const HomeImage = styled.Image`
-    border-radius: 50px;
-    width: 100px;
-    height: 100px;
-    margin: 40px auto 0px auto; 
+    width: 150px;
+    height: 150px;
+    margin: 50px auto 20px auto; 
 `;
- interface IWelcomeProps {
+const DescText = styled.Text`
+    font-size: 20px;
+    margin: auto 20px;
+`;
+ interface IHomeProps {
      myProps: string;
  }
  
- const Home: FC<IWelcomeProps> = props => {
+ const Home: FC<IHomeProps> = props => {
      return (
          <HomeView>
-             <HomeImage source={require('../../assets/icon1.png')} />
-             <WelcomeText>This is Home page</WelcomeText>
+            <HomeImage source={require('../../assets/logo1.png')} />
+            <TitleText>Todo List application</TitleText>
+            <DescText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta, vitae fugiat laborum quod reprehenderit doloribus hic eligendi error recusandae, nihil eveniet. Debitis corporis laborum vitae repudiandae doloremque quis. Necessitatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet perferendis earum, exercitationem eius cupiditate mollitia, aspernatur iste necessitatibus pariatur dolorum, eos consequatur maxime officia magni numquam voluptatum libero nisi natus?</DescText>
          </HomeView>
      );
  };

@@ -9,9 +9,6 @@ const defaultState = (): ITodoListReducer => ({
     todoList: [{
         name: 'Zrobić zakupy',
         description: 'Mleko, chleb, kawa, 2 pomidory'
-    },{
-        name: 'Trening',
-        description: 'od 17 do 20 - zabrać rzeczy!'
     }]
 });
 

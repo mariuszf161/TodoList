@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import { Button } from 'react-native-elements';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { MaterialCommunityIcons } from 'react-native-vector-icons';
 
 import { IState } from '../reducers';
 import { ITodoListReducer } from '../reducers/todoListReducer';
@@ -14,8 +15,8 @@ const Wrapper = styled.View`
 `;
 
 const SingleElementList = styled.View`
-    border-radius: 25px;
-    background: #FEFE33;
+    border-radius: 15px;
+    background: #CDD5FF;
     margin: 0 0 20px 0;
     padding: 5px 10px;
 `;
@@ -27,6 +28,9 @@ const NameText = styled.Text`
 const DescText = styled.Text`
     font-size: 15px;
 `;
+const ButtonContainer = styled.TouchableHighlight`
+    margin: 7px auto 20px auto;
+`
 
 
 const TodoList: FC<{switchView(formView: boolean)}> = props => {
@@ -42,15 +46,12 @@ const TodoList: FC<{switchView(formView: boolean)}> = props => {
                     <DescText>{elem.description}</DescText>
                 </SingleElementList>
             )}
-            <Button
-                icon={{
-                    name: "add",
-                    size: 15,
-                    color: "white"
-                }}
-                title="Dodaj"
-                onPress={goToForm}
-                />
+            <ButtonContainer onPress={goToForm} activeOpacity={1} underlayColor={'transparent'}>
+            <MaterialCommunityIcons
+                name='plus-circle'
+                color='#0066FF'
+                size={50} />
+        </ButtonContainer>
         </Wrapper>
     )
 };
