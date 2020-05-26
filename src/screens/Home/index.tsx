@@ -6,7 +6,7 @@ import Colors from '../../constans/Colors';
 import Layout from '../../constans/Layout'
 
 
-const HomeView = styled.View`
+const HomeView = styled.ScrollView`
     min-height: 100%;
     background: ${Colors.lightBlue};
     padding-top: ${Layout.statusBar + 10}px;
