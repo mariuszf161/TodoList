@@ -22,6 +22,7 @@ const CustomTextInput = styled.TextInput`
     color: black;
     width: 100%;
     border: 2px solid #0066FF;
+    background: white;
     
 `;
 const ButtonContainer = styled.TouchableHighlight`

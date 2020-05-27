@@ -18,9 +18,10 @@ const Wrapper = styled.View`
 
 const SingleElementList = styled.View`
     border-radius: 15px;
-    background: #CDD5FF;
+    background: white;
     margin: 0 0 20px 0;
     padding: 5px 10px;
+    border: 2px solid #0066FF;
 `;
 const NameText = styled.Text`
     font-size: 20px;

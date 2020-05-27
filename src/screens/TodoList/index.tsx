@@ -8,17 +8,21 @@ import Colors from '../../constans/Colors';
 import Form from '../../compnents/Form';
 import TodoList from '../../compnents/TodoList';
 
+const TodoView = styled.ScrollView`
+    background: ${Colors.lightBlue};
+`
+
 const TodoListScreen = ({navigation}) => {
     const [FormViwe, setFromView] = useState<boolean>(false);
 
     return (
-        <ScrollView>
+        <TodoView>
             {FormViwe ? (
                 <Form switchView={setFromView}/>
             ) : (
                 <TodoList switchView={setFromView}/>
             )}
-        </ScrollView>
+        </TodoView>
         
     );
 };
